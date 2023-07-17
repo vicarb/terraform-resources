@@ -1,56 +1,27 @@
 import React, { useState } from 'react';
 import { useSpring } from '@react-spring/web';
 
-const colors = {
-    main: '#795548',
-    light: '#9C7268',
-    dark: '#573F34',
-    accent: '#C09382',
-    text: '#331D1C',
-  };
 
 const LandingComponent = () => {
-  const [size, setSize] = useState(100);
-  const [color, setColor] = useState('red');
 
-  const spring = useSpring(() => ({
-    size,
-    color,
-  }));
-
-  const handleClick = () => {
-    setSize(200);
-    setColor('blue');
-  };
 
   return (
-    <div className="min-h-screen flex justify-center items-center">
-      <div className="max-w-md mx-auto">
-        <h1
-          style={{
-            color: colors.text,
-            backgroundColor: colors.main,
-          }}
-          onClick={handleClick}
-        >
-          My Landing Page
-        </h1>
-        <p style={{ color: colors.text }}>
-          This is my landing page, created using Next.js and TailwindCSS.
-        </p>
-        <a
-          href="#"
-          style={{
-            backgroundColor: colors.accent,
-            color: colors.text,
-          }}
-          className="py-2 px-4 rounded-md"
-        >
-          Learn More
-        </a>
-      </div>
+    <section className="bg-brown-light min-h-screen flex items-center justify-center">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-brown-dark mb-4">
+        Welcome to My Terraform Site
+      </h1>
+      <p className="text-lg text-brown-mid">
+        Learn Terraform and pass the associate exam with ease!
+      </p>
+      <button className="mt-4 px-6 py-2 rounded-full bg-brown-mid text-white hover:bg-brown-dark">
+        Get Started
+      </button>
     </div>
+  </section>
   );
 };
+
+
 
 export default LandingComponent;
